@@ -56,6 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.album-item').forEach(item => {
         observer.observe(item);
     });
+	
+	const headerBg = document.querySelector("header .parallax-bg");
 
     // Add hover effect to navigation
     navLinks.forEach(link => {
@@ -65,20 +67,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Parallax effect on header — disabled on small screens for performance/usability
-    const enableParallax = !window.matchMedia('(max-width: 768px)').matches;
-    if (enableParallax) {
-        const onParallax = () => {
-            const scrollTop = window.pageYOffset;
-            const header = document.querySelector('header');
-            if (header) {
-                header.style.transform = `translateY(${scrollTop * 0.5}px)`;
-            }
-        };
-        window.addEventListener('scroll', onParallax);
-    } else {
-        const header = document.querySelector('header');
-        if (header) header.style.transform = 'translateY(0)';
+    const mq = window.matchMedia("(max-width: 768px)");
+
+    function parallaxScroll() {
+        if (!headerBg) return;
+        const scrollTop = window.pageYOffset;
+        headerBg.style.transform = `translateY(${scrollTop * 0.25}px)`;
     }
+
+    function updateParallax() {
+        if (mq.matches) {
+            headerBg.style.transform = "translateY(0)";
+            window.removeEventListener("scroll", parallaxScroll);
+        } else {
+            window.addEventListener("scroll", parallaxScroll);
+        }
+    }
+
+    updateParallax();
+
+    mq.addEventListener("change", updateParallax);
 
     // Add ripple effect on button clicks
     const buttons = document.querySelectorAll('button, .btn');

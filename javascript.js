@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-<<<<<<< HEAD
     // Dark Mode Toggle
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
@@ -27,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-=======
->>>>>>> 74c7c47448e555ec4fc9243522d9a32af7df543d
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {

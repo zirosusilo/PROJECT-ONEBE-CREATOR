@@ -231,7 +231,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #d32f2f; /* red background */
+    background: var();
     padding: 12px 18px;
     border-radius: 8px;
     font-weight: 700;
@@ -458,14 +458,14 @@ section p {
 }
 
 .wali-kelas-info h3 {
-    color: var(--text-accent);
+    color: var(-);
     font-size: 1.8rem;
     margin-bottom: 15px;
     animation: fadeIn 0.6s ease 0.4s both;
 }
 
 .wali-kelas-bio {
-    color: #616161;
+    color: var(--text-primary);
     line-height: 1.8;
     margin-bottom: 20px;
     font-size: 1rem;
@@ -560,7 +560,7 @@ section p {
 }
 
 #struktur-kelas {
-    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    background: var(--bg-card);
     border-top: 5px solid #d32f2f;
 }
 
@@ -569,6 +569,7 @@ section p {
 }
 
 #struktur-kelas p {
+    color: var(--text-primary);
     animation: scaleUp 0.6s ease 0.1s both;
 }
 
@@ -624,7 +625,7 @@ section p {
 }
 
 #piket-kelas {
-    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    background: var(--bg-card);
     border-top: 5px solid #d32f2f;
 }
 
@@ -680,7 +681,7 @@ section p {
 }
 
 #students {
-    background: linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%);
+    background: var(--bg-card);
     border-top: 5px solid #d32f2f;
 }
 
@@ -689,6 +690,7 @@ section p {
 }
 
 #students p {
+    color: var(--text-primary);
     animation: scaleUp 0.6s ease 0.1s both;
 }
 
@@ -700,7 +702,7 @@ section p {
 }
 
 .student-card {
-    background: #fff;
+    background: var(--bg-card);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(211, 47, 47, 0.1);
@@ -758,7 +760,7 @@ section p {
 }
 
 #projects {
-    background: linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%);
+    background: var(--bg-card);
     border-top: 5px solid #d32f2f;
 }
 
@@ -767,11 +769,12 @@ section p {
 }
 
 #projects p {
+    color: var(--text-primary);
     animation: scaleUp 0.6s ease 0.1s both;
 }
 
 #album-kelas {
-    background: linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%);
+    background: var(--bg-card);
     border-top: 5px solid #d32f2f;
 }
 
@@ -780,6 +783,7 @@ section p {
 }
 
 #album-kelas p {
+    color: var(--text-primary);
     animation: scaleUp 0.6s ease 0.1s both;
 }
 
@@ -827,7 +831,7 @@ section p {
 }
 
 .album-item p {
-    color: #616161;
+    color: var(--text-primary);
     font-size: 0.9rem;
     line-height: 1.5;
     margin: 0 15px 15px 15px;
@@ -841,7 +845,7 @@ section p {
 }
 
 .project {
-    background: #fff;
+    background: var(--bg-card);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(211, 47, 47, 0.1);
@@ -875,7 +879,7 @@ section p {
 }
 
 #contact {
-    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    background: var(--bg-card);
     border-top: 5px solid #d32f2f;
 }
 
@@ -974,7 +978,7 @@ footer {
 }
 
 .social-media-section p {
-    color: #616161;
+    color: var(--text-primary);
     margin-bottom: 30px;
     line-height: 1.6;
     animation: fadeIn 0.6s ease 0.5s both;
@@ -1079,7 +1083,7 @@ footer {
 }
 
 .social-icon.youtube:hover {
-    background: #25f4ee;
+    background: red;
     color: #000;
     box-shadow: 0 8px 25px rgba(37, 244, 238, 0.4);
     transform: translateY(-10px) scale(1.1);
@@ -1147,7 +1151,7 @@ footer {
 }
 
 .footer-social-icon.youtube:hover {
-    background: #25f4ee;
+    background: red;
     color: #000;
 }
 
@@ -1184,3 +1188,12 @@ footer {
 .welcome-message {
     color: var(--text-primary);
 }
+
+#event {
+    background: var(--bg-card);
+}
+
+.p {
+    color: var(--bg-card)
+}
+

@@ -65,14 +65,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #424242;
+    color: var(--text-primary);
     scroll-behavior: smooth;
-    background: #fafafa;
+    background: var(--bg-primary);
 }
 
 header {
-    background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
-    color: #fff;
+    background: var(--header-bg);
+    color: var(--text-white);
     padding: 0.5rem 0;
     position: sticky;
     top: 0;
@@ -93,7 +93,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #d32f2f;
+    background: var(--header-bg);
     padding: 12px 18px;
     border-radius: 8px;
     font-weight: 700;
@@ -111,7 +111,7 @@ nav {
 
 .logo-text {
     font-size: 1.05rem;
-    color: #fff;
+    color: var(--text-white);
 }
 
 nav ul {
@@ -124,14 +124,14 @@ nav ul li {
 }
 
 nav a {
-    color: #fff;
+    color: var(--text-white);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
 }
 
 nav a:hover {
-    color: #ff6f6f;
+    color: var(--text-accent);
     transform: translateY(-3px);
     text-shadow: 0 0 10px rgba(255, 111, 111, 0.5);
 }
@@ -151,7 +151,7 @@ section {
 
 #prestasi-detail h1 {
     text-align: center;
-    color: #d32f2f;
+    color: var(--text-accent);
     margin-bottom: 40px;
     font-size: 2.5rem;
     animation: fadeIn 0.8s ease;
@@ -185,7 +185,7 @@ section {
 }
 
 .prestasi-info h2 {
-    color: #d32f2f;
+    color: var(--text-accent);
     margin-bottom: 20px;
     font-size: 1.8rem;
 }
@@ -193,18 +193,19 @@ section {
 .prestasi-info p {
     margin-bottom: 20px;
     line-height: 1.8;
+    color: var(--text-primary);
 }
 
 .prestasi-details {
-    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    background: var(--bg-card);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    border-left: 5px solid #d32f2f;
+    border-left: 5px solid var(--text-accent);
 }
 
 .prestasi-details h3 {
-    color: #d32f2f;
+    color: var(--text-accent);
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -217,10 +218,11 @@ section {
 .prestasi-details li {
     padding: 8px 0;
     font-weight: 500;
+    color: var(--text-primary);
 }
 
 .prestasi-gallery h3 {
-    color: #d32f2f;
+    color: var(--text-accent);
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
@@ -245,8 +247,8 @@ section {
 }
 
 footer {
-    background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
-    color: #fff;
+    background: var(--footer-bg);
+    color: var(--text-white);
     text-align: center;
     padding: 20px;
     box-shadow: 0 -4px 15px rgba(211, 47, 47, 0.2);
@@ -272,7 +274,7 @@ footer {
     height: 40px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    color: var(--text-white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,7 +285,7 @@ footer {
 
 .footer-social-icon:hover {
     background: #fff;
-    color: #d32f2f;
+    color: var(--text-accent);
     transform: translateY(-8px) rotateZ(360deg);
 }
 

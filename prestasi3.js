@@ -1,20 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Dark mode toggle functionality
+    // Dark Mode Toggle
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
 
-    // Check for saved dark mode preference
-    const savedDarkMode = localStorage.getItem('darkMode');
-    if (savedDarkMode === 'enabled') {
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
         darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
 
+    // Toggle dark mode
     darkModeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
-        const isDarkMode = body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
-        darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+
+        // Update icon
+        if (theme === 'dark') {
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
     });
 
     // Smooth scrolling for navigation links
